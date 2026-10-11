@@ -1,0 +1,13 @@
+train_manifest: data/synthetic/train.manifest.json
+val_manifest: data/synthetic/val.manifest.json
+model:
+  width: 64
+  depth: 4
+  heads: 4
+batch_size: 1
+min_frames: 20
+max_frames: 64
+max_steps: 10
+max_train_seconds: 60.0
+validation_every: 10
+artifact_label: tiny-trained smoke checkpoint; verifies integration only, not tennis accuracy

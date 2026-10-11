@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+set -euo pipefail
+# Override paths in the launch environment; use one checkout/environment per job.
+experiment_root="${TENNIS3D_ROOT:-$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)}"
+experiment_python="${TENNIS3D_PYTHON:-$experiment_root/.venv/bin/python}"
+export OMP_NUM_THREADS=2 MKL_NUM_THREADS=2
+cd -- "$experiment_root"
+if [[ -n "${TENNIS3D_GPU_LOCK:-}" ]]; then
+    exec flock "$TENNIS3D_GPU_LOCK" "$experiment_python" -m tennis3d experiment "$@"
+fi
+exec "$experiment_python" -m tennis3d experiment "$@"

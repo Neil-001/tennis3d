@@ -1,0 +1,63 @@
+name: App install
+on:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  install:
+    # Source-folder launch and CPU reconstruction with the pinned weights, which
+    # the first launch downloads from their public sources, on the
+    # GitHub-hosted Linux runner. The launcher brings its own uv and Python.
+    # The steps stay portable, but a run only qualifies the operating system
+    # and architecture it reports.
+    strategy:
+      fail-fast: false
+      matrix:
+        # No GPU or host compute driver is assumed. The optional GPU profiles
+        # are installed and imported; reconstruction runs on CPU only.
+        profile: [cpu, cu126, intel]
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      TENNIS3D_PROFILE: ${{ matrix.profile }}
+    steps:
+      - name: Report the actual runner
+        shell: bash
+        run: echo "runner.os=$RUNNER_OS runner.arch=$RUNNER_ARCH $(uname -a)"
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - name: First launch (Linux, macOS)
+        if: runner.os != 'Windows'
+        run: ./tennis3d.sh version
+      - name: First launch (Windows)
+        if: runner.os == 'Windows'
+        shell: cmd
+        run: Tennis3D.bat version
+      - name: Second launch starts without reinstalling
+        shell: bash
+        run: |
+          if [ "$RUNNER_OS" = Windows ]; then cmd //c Tennis3D.bat setup --check; else ./tennis3d.sh setup --check; fi | tee second-launch.log
+          ! grep -q 'Setting up Tennis3D' second-launch.log
+          rm second-launch.log
+      - name: The checkout gained only local-app
+        shell: bash
+        run: test "$(git status --porcelain --ignored)" = '!! local-app/'
+      - name: Reconstruct through the CLI and the app
+        shell: bash
+        run: |
+          export TENNIS3D_HOME="$PWD/local-app"
+          python="$TENNIS3D_HOME/runtime/venv/bin/python"
+          [ "$RUNNER_OS" = Windows ] && python="$TENNIS3D_HOME/runtime/venv/Scripts/python.exe"
+          "$python" -c "import torch; print(torch.__version__, torch.version.cuda, torch.cuda.is_available())"
+          if [ "$TENNIS3D_PROFILE" = intel ]; then
+            "$python" -c "import openvino; print(openvino.get_version())"
+          fi
+          if [ "$TENNIS3D_PROFILE" = cpu ]; then
+            "$python" scripts/qualify_install.py --output "$RUNNER_TEMP/qualification" --device cpu
+          fi
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        if: always() && matrix.profile == 'cpu'
+        with:
+          name: qualification-${{ runner.os }}-${{ runner.arch }}
+          path: ${{ runner.temp }}/qualification/qualification.json

@@ -1,0 +1,60 @@
+[project]
+name = "tennis3d"
+version = "0.1.0"
+description = "Monocular tennis ball reconstruction"
+readme = "README.md"
+license = "GPL-3.0-only"
+license-files = ["LICENSE", "licenses/*.txt", "licenses/README.md"]
+requires-python = ">=3.11,<3.13"
+dependencies = ["numpy>=2.0,<3", "pydantic>=2.10,<3", "PyYAML>=6,<7"]
+
+[project.optional-dependencies]
+labeling = ["av==15.1.0"]
+data = ["pyarrow>=19,<26", "huggingface-hub==1.33.0"]
+backup = ["huggingface-hub==1.33.0", "torch==2.10.0"]
+lifting = ["torch==2.10.0"]
+# Everything the local app and `tennis3d reconstruct` need; no training or data extras.
+app = ["torch==2.10.0", "opencv-python-headless==4.11.0.86", "av==15.1.0", "scipy==1.15.3", "scikit-image==0.25.2", "pykalman==0.11.2"]
+perception = ["torch==2.10.0", "opencv-python-headless==4.11.0.86", "av==15.1.0", "scipy==1.15.3", "scikit-image==0.25.2", "pykalman==0.11.2"]
+# Optional Intel graphics detection through OpenVINO on Linux x86_64.
+intel = ["openvino==2026.4.1"]
+
+synthetic = ["mujoco==3.14.0", "scipy>=1.14,<2"]
+
+[build-system]
+requires = ["hatchling>=1.26,<2"]
+build-backend = "hatchling.build"
+
+[project.scripts]
+tennis3d = "tennis3d.cli:main"
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.6.2",
+    "pytest>=9.1.1",
+    "ruff>=0.16.8",
+    "ty>=0.0.84",
+]
+
+[tool.ruff]
+target-version = "py311"
+
+[tool.ruff.lint]
+extend-select = ["I"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+# MuJoCo exports these native bindings dynamically; runtime physics tests cover them.
+[[tool.ty.overrides]]
+include = ["tennis3d/synthetic/simulate.py"]
+[tool.ty.overrides.rules]
+unresolved-attribute = "ignore"
+
+[[tool.uv.index]]
+name = "pytorch-cu126"
+url = "https://download.pytorch.org/whl/cu126"
+explicit = true
+
+[tool.uv.sources]
+torch = [{ index = "pytorch-cu126", marker = "sys_platform == 'linux' or sys_platform == 'win32'" }]

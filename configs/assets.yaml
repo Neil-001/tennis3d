@@ -1,0 +1,20 @@
+version: 1
+assets:
+  ball:
+    url: https://drive.google.com/uc?export=download&id=1XEYZ4myUN7QT-NeBYJI0xteLsvs-ZAOl
+    path: checkpoints/perception/tracknet.pth
+    sha256: c735bc1a1b13a35f179c6492f778ef4ebb9bffd512a96f4d970b32e076653076
+    bytes: 42886919
+    source: https://github.com/yastrebksv/TrackNet
+    revision: 730ea17a324321c553c480179caa8ff13e4cf553
+    license: Unspecified source and weight license. Fetch original weights for local use; redistribution permission unverified.
+    purpose: Published unofficial tennis TrackNet checkpoint; exact training split unknown.
+  court:
+    url: https://drive.google.com/uc?export=download&id=1f-Co64ehgq4uddcQm1aFBDtbnyZhQvgG
+    path: checkpoints/perception/court.pth
+    sha256: 09aa8c4338459ba1d643f2dc329f45f464dedec3720fccc1a4abfd1f7b464d04
+    bytes: 42312975
+    source: https://github.com/yastrebksv/TennisCourtDetector
+    revision: e5cd4f1ce26b15361700d3d89e068cbf0e82749e
+    license: Unspecified source and weight license. Fetch original weights for local use; redistribution permission unverified.
+    purpose: Fourteen court intersections and auxiliary center heatmap; training overlap unknown.

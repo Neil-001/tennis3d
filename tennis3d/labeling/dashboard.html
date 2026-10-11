@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Tennis3D event labels</title><link rel="stylesheet" href="/theme.css"><link rel="stylesheet" href="/dashboard.css"><script src="/dashboard.js" defer></script></head>
+<body>
+<header class="topbar"><a class="brand" href="/"><span class="brand-mark" aria-hidden="true">T3</span><span>Tennis<b>3D</b></span></a><nav aria-label="Sections"><a href="#labeling" aria-current="page">Event labels</a></nav><span id="progress" class="state" aria-live="polite"></span></header>
+<main class="page" id="labeling">
+<section class="hero"><p class="label">Local labeling</p><h1>Hits &amp; bounces</h1></section>
+<div class="workspace"><section class="card player-panel">
+<div class="card-head clip-heading"><div><h2 id="match">Loading gallery…</h2><p id="clip-name"></p></div><label>Jump to clip <select id="gallery" aria-label="Gallery clip"></select></label></div>
+<div class="screen"><video id="video" muted playsinline preload="auto" hidden></video><img id="original" alt="Selected original video frame" hidden><span id="loading" role="status" aria-live="polite">Loading original frame…</span></div>
+<div class="controls">
+<div class="frame-info"><strong id="frame-readout">No frame selected</strong><span id="display-mode">Original frame</span></div>
+<div id="timeline"><input id="scrub" type="range" min="0" max="0" value="0" step="1" aria-label="Selected frame"><div id="markers" aria-label="Event timeline"></div></div>
+<div class="transport"><button id="back-frame" title="Left arrow">← Frame</button><button id="play" title="Space">Play</button><button id="forward-frame" title="Right arrow">Frame →</button><label>Speed <select id="speed"><option value="0.25">0.25×</option><option value="0.5">0.5×</option><option value="1" selected>1×</option></select></label></div>
+<div class="label-actions"><button id="hit" class="hit">Hit <kbd>H</kbd></button><button id="bounce" class="bounce">Bounce <kbd>B</kbd></button><button id="undo">Undo</button></div>
+</div>
+<p class="card-foot help">Mark the selected frame. Use ← / → to refine it, Space to play or pause, and H / B to label. Playback pauses on marking.</p>
+</section><aside class="card"><div class="card-head events-heading"><h2>Events <span id="event-count">0</span></h2><span id="state">Not submitted</span></div><div class="events-body"><p class="help">Click an event to revisit its frame. Delete and mark again to adjust it.</p><ol id="events"></ol><label class="annotator">Annotator <input id="annotator" value="Local annotator" maxlength="120" autocomplete="name"></label><button id="submit" class="primary">Submit labels</button><button id="reload-saved">Reload saved labels</button><p id="status" role="status" aria-live="polite"></p></div><p class="card-foot help">Submit confirms the event inventory for this clip. An empty submission is valid. Unmarked frames provide no ball position or visibility labels.</p></aside></div>
+<div class="clip-nav"><button id="previous">← Previous clip</button><span>Unsaved drafts stay in this browser when you navigate.</span><button id="next" class="primary">Next clip →</button></div>
+<footer class="foot"><span>Labels are saved on this computer only.</span><span>Tennis3D · GPL-3.0-only · Typeface Google Sans Code, <a href="/font-license.txt">SIL OFL 1.1</a></span></footer>
+<dialog id="reload-dialog"><h2>Reload saved labels?</h2><p>This replaces this clip's draft with its latest disk submission. Other clips' drafts stay intact.</p><button id="cancel-reload">Keep draft</button><button id="confirm-reload">Reload saved labels</button></dialog>
+</main></body></html>

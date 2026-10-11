@@ -1,0 +1,34 @@
+name: Offline viewer
+on:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  viewer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: astral-sh/setup-uv@d0cc045d04ccac9d8b7881df0226f9e82c39688e # v6
+        with:
+          version: '0.12.18'
+          python-version: '3.12'
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: viewer/package-lock.json
+      - run: uv sync --locked --extra labeling
+      - run: npm --prefix viewer ci
+      - run: npm --prefix viewer test
+      - run: npm --prefix viewer run install-browser -- --with-deps
+      - name: Packaged app page matches the viewer sources
+        run: git diff --exit-code -- tennis3d/resources/dashboard.html
+      - run: npm --prefix viewer run test:browser
+      - run: npm --prefix viewer run test:app
+      - run: npm --prefix viewer run build:pages
+      - run: PLAYWRIGHT_BROWSERS_PATH="$PWD/viewer/.browsers" npm --prefix viewer run test:pages
+      - run: npm --prefix viewer run test:dashboard
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: offline-viewer
+          path: dist/viewer.html

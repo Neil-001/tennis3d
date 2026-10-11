@@ -1,0 +1,25 @@
+{
+  "name": "tennis3d-viewer",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node ../scripts/build_viewer.mjs",
+    "test": "npm run build && node --test tests/*.test.mjs",
+    "test:browser": "npm run build && PLAYWRIGHT_BROWSERS_PATH=\"$PWD/.browsers\" node tests/browser.mjs",
+    "test:dashboard": "PLAYWRIGHT_BROWSERS_PATH=\"$PWD/.browsers\" node tests/dashboard.mjs && PLAYWRIGHT_BROWSERS_PATH=\"$PWD/.browsers\" node tests/dashboard-multirun.mjs && PLAYWRIGHT_BROWSERS_PATH=\"$PWD/.browsers\" node tests/dashboard-throughput.mjs && PLAYWRIGHT_BROWSERS_PATH=\"$PWD/.browsers\" node tests/event-labeling.mjs && PLAYWRIGHT_BROWSERS_PATH=\"$PWD/.browsers\" node tests/event-labeling-performance.mjs",
+    "install-browser": "PLAYWRIGHT_BROWSERS_PATH=\"$PWD/.browsers\" PLAYWRIGHT_SKIP_BROWSER_GC=1 playwright install chromium",
+    "test:event-labeling-performance": "PLAYWRIGHT_BROWSERS_PATH=\"${PLAYWRIGHT_BROWSERS_PATH:-$PWD/.browsers}\" node tests/event-labeling-performance.mjs",
+    "test:app": "npm run build && PLAYWRIGHT_BROWSERS_PATH=\"$PWD/.browsers\" node tests/app.mjs && PLAYWRIGHT_BROWSERS_PATH=\"$PWD/.browsers\" node tests/gallery.mjs",
+    "build:pages": "node ../scripts/build_pages.mjs",
+    "test:pages": "node tests/pages.mjs"
+  },
+  "dependencies": {
+    "jsonc-parser": "3.3.1",
+    "three": "0.180.0"
+  },
+  "devDependencies": {
+    "ajv": "8.20.0",
+    "esbuild": "0.25.10",
+    "playwright": "1.55.1"
+  }
+}

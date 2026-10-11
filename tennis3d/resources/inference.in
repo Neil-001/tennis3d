@@ -1,0 +1,12 @@
+# Inference-only dependencies. Each lock adds its PyTorch build:
+#   uv pip compile inference.in TORCH.in --universal --python-version 3.11 --generate-hashes \
+#     --extra-index-url https://download.pytorch.org/whl/PROFILE --index-strategy unsafe-best-match
+# where TORCH.in pins torch==2.10.0+PROFILE off macOS and torch==2.10.0 on macOS.
+numpy==2.4.6
+pydantic==2.13.5
+pyyaml==6.0.3
+opencv-python-headless==4.11.0.86
+av==15.1.0
+scipy==1.15.3
+scikit-image==0.25.2
+pykalman==0.11.2

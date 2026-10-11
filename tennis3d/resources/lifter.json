@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "file": "tennis3d-lifter-stage4.pt",
+  "sha256": "9cfc12371dcc698bffb5e0c25a483dbc7143c08142a47bef5eaf5611201425fa",
+  "bytes": 7061198,
+  "url": "https://huggingface.co/N-il/tennis3d-lifter-inference/resolve/main/tennis3d-lifter-stage4.pt",
+  "license": "GPL-3.0-only",
+  "weights": "EMA",
+  "architecture_version": "stage3-v1",
+  "source_checkpoint_sha256": "589ea17734c0643f44393692ed9a197e90f897481fe207b8387003d15e350e67",
+  "source_step": 83334,
+  "model_label": "Tennis3D stage 4 lifter; real 3D accuracy unmeasured"
+}

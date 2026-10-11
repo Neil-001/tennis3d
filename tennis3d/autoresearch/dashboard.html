@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Tennis experiments</title><link rel="stylesheet" href="/style.css">
+  <script src="/dashboard.js" defer></script>
+</head>
+<body>
+  <header><h1>Tennis experiments</h1><span class="tag">Read only · local logs</span></header>
+  <p id="connection" role="status">Connecting…</p><p id="warning" role="alert"></p>
+  <label for="segment">Comparison segment</label> <select id="segment"></select>
+  <p id="segment-info"></p>
+  <div class="summary"><p id="best"></p><p id="baseline"></p><p id="live"></p></div>
+  <div id="accuracy-view"><section><h2>Validation history</h2><p>Mean physical-rally XYZ error in metres, lower is better. Smoke scores are separate. The y-axis uses a log scale and plots positive values only.</p>
+    <canvas id="history" aria-label="Validation scores and best retained score with a logarithmic y-axis" role="img"></canvas>
+    <p class="legend">Blue: new retained record · green: best retained · orange: record baseline · grey: no new record · red × in unscored lane: failed attempt</p>
+  </section>
+  <section class="table-wrap"><h2>Trials</h2><table><thead><tr><th>Trial</th><th>Change</th><th>Status</th><th>XYZ (m)</th><th>Train / total (s)</th><th>Steps</th></tr></thead><tbody id="trials"></tbody></table></section>
+  <section><h2 id="selected">Trial details</h2><p id="detail-summary">Select a trial to inspect its training curve and metrics.</p>
+    <label><input id="compare-best" type="checkbox"> Compare with best retained trial in this segment</label>
+    <p id="comparison-status" role="status"></p>
+    <canvas id="curve" aria-label="Training loss against elapsed training seconds with a logarithmic y-axis" role="img"></canvas>
+    <p id="curve-legend" class="legend">The y-axis uses a log scale and plots positive values only.</p>
+    <p id="loss-label">Training objective in normalized model units. Final validation XYZ determines the comparison.</p>
+    <pre id="details"></pre>
+  </section>
+  </div>
+  <div id="throughput-view" hidden>
+    <section><h2>Throughput campaign</h2><p id="throughput-objective"></p><dl id="throughput-facts" class="campaign-facts"></dl><p id="throughput-latest"></p><p id="throughput-counts"></p><details id="protocol-details"><summary>Frozen protocol summary and full source identities</summary><pre id="throughput-identity"></pre></details><details id="qualification-details"><summary>Qualification baseline pairs</summary><p id="qualification"></p></details></section>
+    <section><h2>Paired timing history</h2><p>Candidate / same-job incumbent ratios. Below 1 is faster. Workloads have equal weight. Retention follows recorded decisions and independent gates.</p><canvas id="timing-history" role="img" aria-label="Paired pipeline timing ratios"></canvas><p class="legend">Elapsed: blue · stream: orange · sustained: green. Seconds and ratio names are kept separate from accuracy scores.</p></section>
+    <section class="table-wrap"><h2>Candidate attempts</h2><table><thead><tr><th>Trial</th><th>Change</th><th>Status / decision</th><th>Elapsed ratio</th><th>Stream ratio</th><th>Sustained ratio</th></tr></thead><tbody id="throughput-trials"></tbody></table></section>
+    <section><h2 id="throughput-selected">Workload comparison</h2><p id="throughput-detail-status"></p><p id="throughput-accounting"></p><p id="diagnostic-summary-note">Paired-report means. Resource peaks and loader p95 show the maximum reported across pairs.</p><div class="table-wrap"><table class="metrics-table"><thead><tr><th>Workload / source</th><th>Timing means</th><th>Throughput / loader stall</th><th>Resource peaks</th></tr></thead><tbody id="diagnostic-summary"></tbody></table></div><div class="table-wrap"><table><thead><tr><th>Workload / pair</th><th>Metric</th><th>Candidate (s)</th><th>Same-job incumbent (s)</th><th>Ratio</th></tr></thead><tbody id="workloads"></tbody></table></div><details id="diagnostic-details"><summary>Full recorded score, source identities and raw diagnostics</summary><pre id="throughput-diagnostics"></pre></details></section>
+  </div>
+  <footer>Polling every 2 seconds. Stop and resume through the experiment CLI and Codex. This page cannot change the search.</footer>
+</body></html>

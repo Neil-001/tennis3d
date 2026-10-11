@@ -1,0 +1,132 @@
+{
+  "status": "verified-release",
+  "repo_id": "N-il/tennis-3d-synthetic",
+  "generator_commit": "2ce019fda01a518ee03a58817b6ca5e05455b7d8",
+  "generator_source_sha256": "59ea08715033e18dd35dd849d38f689ed4dc072e0a41884ea627f3e659c89006",
+  "pool_source_sha256": "e1b67e053fa91f711a2be748c3d619cb9e48d744856be0d558d02d3e1b49324c",
+  "main": {
+    "commit": "c2e782053694cfde305362e670ebbb4f4e70884c",
+    "manifest_artifact": {
+      "path": "dataset/manifest.json",
+      "sha256": "b32fe9cc97226c9d67468bcf7724f7d3ffc8924541798796744f9ba62bba6707",
+      "size_bytes": 103681865
+    },
+    "catalog_artifact": {
+      "path": "dataset/catalog.json",
+      "sha256": "2daa0eacf797514229ca141771ecd0854123bd5c4ac0381b9dc32276137e3130",
+      "size_bytes": 297950825
+    },
+    "audit_artifact": {
+      "path": "dataset/audit.json",
+      "sha256": "f7a031ff78190453125e72a0ca3cb4138722a743c5b114269e4bac542df50163",
+      "size_bytes": 218
+    },
+    "counts": {
+      "test": {
+        "frames": 1829263,
+        "rallies": 5000,
+        "views": 10000
+      },
+      "train": {
+        "frames": 73310435,
+        "rallies": 200000,
+        "views": 400000
+      },
+      "val": {
+        "frames": 1819000,
+        "rallies": 5000,
+        "views": 10000
+      }
+    },
+    "coverage_artifact": {
+      "path": "dataset/summary.json",
+      "sha256": "1ed11265459317c6c819b54ee43fe43e40944485feaf51317560a98d93a8375a",
+      "size_bytes": 2520301
+    },
+    "largest_shard_bytes": 310912460,
+    "max_group_bytes": 268435456,
+    "reader_cache_bytes": 1073741824
+  },
+  "compact": {
+    "publication_commit": "a5420e23f6bc3a5391254de78fead7115420b9aa",
+    "descriptor_artifact": {
+      "path": "dataset/search/subset.json",
+      "sha256": "98ddc97ae12ad9d4d73a035c26806558f7be94ffcb73975f906645e9d1f52d0a",
+      "size_bytes": 8644031
+    },
+    "descriptor_sha256": "71350ddcdf202bbac61fbe6275f457f28939a770d6ca4d65b34d872005fa4816",
+    "counts": {
+      "test": {
+        "frames": 0,
+        "rallies": 0,
+        "views": 0
+      },
+      "train": {
+        "frames": 1505060,
+        "rallies": 4096,
+        "views": 8192
+      },
+      "val": {
+        "frames": 93485,
+        "rallies": 256,
+        "views": 512
+      }
+    },
+    "max_group_bytes": 268435456,
+    "reader_cache_bytes": 2147483648
+  },
+  "final_reference_source_commit": "e0afee4df6659889f4524e180de52cec9321473e",
+  "final_reference_trial": {
+    "date": "2026-10-04",
+    "segment": "stage2-final-reference",
+    "segment_sha256": "bb126fc77cef96bac0141885cd0c40d8bfb48d9abcaaec9a15665a9fbe66cd88",
+    "hardware": "one NVIDIA GeForce RTX 2080 Ti, one Slurm job",
+    "run_directory": "node-local disk, copied to scratch after the trial",
+    "status": "kept",
+    "val_xyz_m": 1.739842578702583,
+    "clean_val_xyz_m": 1.6534639321231674,
+    "parameter_count": 1633731,
+    "steps": 5187,
+    "windows": 10374,
+    "train_seconds": 300.0401541441679,
+    "total_seconds": 439.5774196572602,
+    "peak_gpu_allocated_bytes": 77353472,
+    "mean_gpu_utilization_percent": 7.8,
+    "checkpoint_sha256": "b94557d8303adac81e39b3302f4f0feb1588e90555735b19ad8e7dc135ff0345",
+    "metrics_sha256": "5001b16d6342a772ba9419784b8a2443bd223026a19d0a547a4fe24164d8db0d"
+  },
+  "actual_pinned_reader_report": {
+    "date": "2026-10-03",
+    "host": "local workstation",
+    "access": "anonymous",
+    "script": "scripts/read_main.py",
+    "revision": "c2e782053694cfde305362e670ebbb4f4e70884c",
+    "splits_read": [
+      "train",
+      "val",
+      "test"
+    ],
+    "views_read_per_split": 1,
+    "cache_bytes": 1073741824,
+    "max_group_bytes": 268435456,
+    "wall_seconds": {
+      "train": 28.69,
+      "val": 25.87,
+      "test": 50.38
+    },
+    "peak_rss_kib": 1401840
+  },
+  "actual_materialization_report": {
+    "date": "2026-10-03",
+    "host": "local workstation",
+    "access": "anonymous",
+    "script": "scripts/materialize_compact.py",
+    "revision": "a5420e23f6bc3a5391254de78fead7115420b9aa",
+    "verified_offline": true,
+    "materialized_bytes": 1200689837,
+    "cache_bytes": 2147483648,
+    "max_group_bytes": 268435456,
+    "wall_seconds": 178.2,
+    "peak_rss_kib": 759524
+  }
+}

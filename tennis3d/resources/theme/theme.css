@@ -1,0 +1,81 @@
+/* Shared Tennis3D theme: tokens, typeface and base controls for the app page,
+   the offline viewer and the event-labeling dashboard. */
+@font-face{font-family:"Google Sans Code";font-style:normal;font-weight:300 800;font-display:swap;src:url(GoogleSansCode-latin.woff2) format("woff2")}
+:root{color-scheme:light dark;
+  --bg:#ffffff;--fg:#09090b;--card:#ffffff;--bar:#fafafa;--soft:#f4f4f5;--muted:#6b6b74;--line:#e4e4e7;--ring:#a1a1aa;
+  --accent:#038f99;--accent-text:#04737b;--warn:#b45309;--bad:#c10007;--bad-soft:#fef2f2;--stage:#09090b;--stage-fg:#fafafa;
+  --ball:#d7ff62;--inferred:#fbbf24;--hit:#038f99;--bounce:#f59e0b;
+  font-family:"Google Sans Code",ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+  font-size:14px;line-height:20px;color:var(--fg);background:var(--bg);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+@media(prefers-color-scheme:dark){:root{
+  --bg:#09090b;--fg:#fafafa;--card:#18181b;--bar:#18181b;--soft:#27272a;--muted:#a1a1aa;--line:#2e2e2e;--ring:#71717a;
+  --accent:#19b4bf;--accent-text:#19b4bf;--warn:#fbbf24;--bad:#ff8a80;--bad-soft:#2a1215}}
+*{box-sizing:border-box}
+body{margin:0}
+[hidden]{display:none!important}
+h1,h2,p{margin:0}
+h1{font-size:clamp(24px,4.4vw,44px);line-height:1.1;font-weight:400;letter-spacing:-.05em;text-transform:uppercase}
+h2{font-size:14px;font-weight:500;text-transform:uppercase}
+a{color:inherit}
+.muted{color:var(--muted)}
+.label{font-size:12px;line-height:16px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.failure{color:var(--bad);overflow-wrap:anywhere}
+.inferred{color:var(--warn)}
+/* Sticky bar: brand, section links, state. */
+.topbar{position:sticky;top:0;z-index:40;min-height:56px;display:flex;align-items:center;gap:8px 24px;padding:0 32px;background:color-mix(in srgb,var(--bar) 86%,transparent);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.brand{display:inline-flex;align-items:center;gap:10px;color:inherit;text-decoration:none;font-weight:600;letter-spacing:-.025em;text-transform:uppercase;white-space:nowrap}
+.brand-mark{display:grid;place-items:center;width:28px;height:28px;border:1px solid var(--accent);color:var(--accent-text);font-size:11px;font-weight:700;letter-spacing:-.05em}
+.brand b{font-weight:600;color:var(--accent-text)}
+.topbar nav{display:flex;gap:8px;min-width:0}
+.topbar nav a{padding:8px;color:var(--muted);text-decoration:none;text-transform:uppercase;white-space:nowrap}
+.topbar nav a:hover,.topbar nav a[aria-current]{color:var(--fg)}
+.topbar .state{margin-left:auto;color:var(--muted);font-size:12px;text-align:right}
+.topbar .state::before{content:'';display:inline-block;width:6px;height:6px;margin-right:8px;background:var(--accent)}
+.page{max-width:1464px;margin:auto;padding:0 32px}
+.hero{padding:48px 0 32px;text-align:center}
+.hero p{margin-top:16px;color:var(--muted);font-size:16px;line-height:24px;letter-spacing:-.04em}
+/* Controls. */
+button,select,input,textarea{font:inherit;color:inherit}
+button,.button,select,input[type=text],input:not([type]){display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:36px;padding:0 12px;border:1px solid var(--line);border-radius:0;background:var(--card);font-weight:500;white-space:nowrap}
+button,.button,select{cursor:pointer}
+input[type=text],input:not([type]){justify-content:flex-start;font-weight:400;cursor:text}
+button:hover,.button:hover,select:hover{background:var(--soft)}
+button:disabled,.button.disabled{opacity:.45;cursor:default;pointer-events:none}
+.soft{background:var(--soft);border-color:transparent}
+.soft:hover{background:var(--line)}
+.primary{background:var(--fg);border-color:var(--fg);color:var(--bg)}
+.primary:hover{background:var(--fg);opacity:.86}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible,.button:focus-within{outline:2px solid var(--accent);outline-offset:2px}
+.button{position:relative}
+.button input[type=file]{position:absolute;inset:0;width:100%;opacity:0;cursor:pointer}
+.segments{display:inline-flex;border:1px solid var(--line);background:var(--card)}
+.segments button{border:0;border-right:1px solid var(--line);min-height:30px;font-size:12px;text-transform:uppercase;color:var(--muted)}
+.segments button:last-child{border-right:0}
+.segments button:hover{color:var(--fg)}
+input[type=range]{accent-color:var(--accent);cursor:pointer}
+input[type=checkbox]{accent-color:var(--accent)}
+progress{appearance:none;width:100%;height:10px;border:0;background:var(--soft);color:var(--accent)}
+progress::-webkit-progress-bar{background:var(--soft)}
+progress::-webkit-progress-value{background:var(--accent)}
+progress::-moz-progress-bar{background:var(--accent)}
+kbd{font:inherit;font-size:11px;padding:1px 5px;border:1px solid currentColor;opacity:.7}
+/* Bordered card with a title row, as used for every panel. */
+.card{min-width:0;border:1px solid var(--line);background:var(--card)}
+.card-head{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px 16px;min-height:48px;padding:10px 16px;border-bottom:1px solid var(--line);color:var(--muted);text-transform:uppercase}
+.card-head h2{color:var(--fg)}
+.card-foot{padding:12px 16px;border-top:1px solid var(--line);color:var(--muted);font-size:12px;line-height:18px}
+table{width:100%;border-collapse:collapse;text-align:left;white-space:nowrap;font-variant-numeric:tabular-nums}
+th,td{height:40px;padding:6px 16px;border-bottom:1px solid var(--line)}
+th{font-weight:500;text-transform:uppercase}
+tbody tr:hover{background:color-mix(in srgb,var(--soft) 50%,transparent)}
+tbody tr:last-child td{border-bottom:0}
+details{border-top:1px solid var(--line)}
+summary{padding:14px 0;cursor:pointer;text-transform:uppercase;color:var(--muted)}
+summary:hover{color:var(--fg)}
+pre{margin:0 0 14px;white-space:pre-wrap;overflow-wrap:anywhere;font:inherit;font-size:12px;line-height:18px;max-height:260px;overflow:auto;color:var(--muted)}
+dialog{max-width:440px;padding:24px;border:1px solid var(--line);border-radius:0;background:var(--card);color:var(--fg)}
+dialog::backdrop{background:#000a}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;padding:24px 0 32px;color:var(--muted);font-size:12px;line-height:16px}
+.foot a{color:var(--fg);text-decoration:none}
+.foot a:hover{text-decoration:underline}
+@media(max-width:760px){.topbar{padding:8px 16px;flex-wrap:wrap}.topbar nav{order:3;width:100%;overflow-x:auto;margin:0 -8px}.page{padding:0 16px}.hero{padding:32px 0 24px}.hero p{font-size:14px;line-height:22px}}

@@ -1,0 +1,16 @@
+# Installed defaults. Weight paths and the device are resolved at run time.
+detection:
+  save_heatmaps: false
+  overlay_every: 0
+calibration:
+  mode: moving
+lifting:
+  max_frames: 250
+  stride: 125
+quality:
+  bracketed_gap_s: 0.5
+  boundary_gap_s: 0.15
+  max_window_disagreement_m: 2.0
+  min_height_m: -0.05
+  max_height_m: 30.0
+  max_speed_m_s: 100.0

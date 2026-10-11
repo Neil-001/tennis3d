@@ -1,0 +1,32 @@
+train_manifest: configs/stage4-preparation-main-v1/qualified-sources/train.source.json
+val_manifest: configs/stage4-preparation-main-v1/qualified-sources/reserved-val.source.json
+model:
+  architecture_version: stage3-v1
+  width: 176
+  depth: 4
+  heads: 11
+  mlp_ratio: 3
+  dropout: 0.0
+  gated_ffn: true
+  gated_head: true
+  temporal_bias: true
+  schedule_steps: 83334
+  outward_radial_brake: 0.5
+  batched_muon: true
+seed: 42
+batch_size: 48
+min_frames: 20
+max_frames: 250
+event_crop_probability: 0.25
+learning_rate: 0.0016
+ema_decay: 0.99
+gradient_clip: 5.0
+max_steps: 83334
+max_train_seconds: 138240.0
+max_job_seconds: 172800.0
+validation_every: 4005
+checkpoint_every: 241
+log_every: 10
+patience: 8
+device: cuda
+artifact_label: Stage4 full training preparation; full training requires authorization

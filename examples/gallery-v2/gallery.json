@@ -1,0 +1,385 @@
+{
+ "clips": [
+  {
+   "id": "gallery-v2-01-01",
+   "media_offset_s": 0.0,
+   "note": "partial: 533 of 540 source frames have exported XYZ; 540 have raw model output; window_disagreement",
+   "playback_path": "gallery-v2-01-01/playback.mp4",
+   "playback_sha256": "b38bb054c72de97602aea5790963fc7c038fb8e7304d11e24fadc2e69d9ff438",
+   "result_path": "gallery-v2-01-01/result.json",
+   "result_sha256": "045c3a1cdf8629d624fe0232e12eb16b4babc82cd3c352b3a9fc9c5d027244a2",
+   "rights": {
+    "local_use": "permitted",
+    "redistribution": "unknown",
+    "source_url": "https://www.youtube.com/watch?v=Mo3COU35RNQ"
+   },
+   "source_path": "gallery-v2-01-01/source.mp4",
+   "source_sha256": "7d94e318faf8222c564e2335a80fef09a97db32a5d70c1e5732124340f85e51f",
+   "timeline_path": "gallery-v2-01-01/timeline.json",
+   "timeline_sha256": "80af43c6fad882c7b9d755734bbcfceb4c3a91c34a0a865be3469fbb601612d8",
+   "title": "Indian Wells 2012 · Federer v Nadal · 0:06–0:15"
+  },
+  {
+   "id": "gallery-v2-01-02",
+   "media_offset_s": 0.0,
+   "note": "partial: 287 of 360 source frames have exported XYZ; 289 have raw model output; ambiguous_track, implausible_prediction, invalid_camera, long_gap",
+   "playback_path": "gallery-v2-01-02/playback.mp4",
+   "playback_sha256": "6ea606b2c1b588fb12afde2a6b01ca8c72bc94132d8ac53317052d6dd7805031",
+   "result_path": "gallery-v2-01-02/result.json",
+   "result_sha256": "0cdc6003e10fcb3b2d22bcea1bb2f848f8f9e0c7d53891639a7ac6e21b8df508",
+   "rights": {
+    "local_use": "permitted",
+    "redistribution": "unknown",
+    "source_url": "https://www.youtube.com/watch?v=Mo3COU35RNQ"
+   },
+   "source_path": "gallery-v2-01-02/source.mp4",
+   "source_sha256": "cb5d783fdec35aaa7a90dead65aa1f1304475252efe771e5c5ab1ac0f4ddbf7c",
+   "timeline_path": "gallery-v2-01-02/timeline.json",
+   "timeline_sha256": "e9aa8e469eb71fb683eac810cf5a481acbf6a2a155ed3c46c13cdb4add9f3974",
+   "title": "Indian Wells 2012 · Federer v Nadal · 5:38–5:44"
+  },
+  {
+   "id": "gallery-v2-01-03",
+   "media_offset_s": 0.0,
+   "note": "partial: 352 of 360 source frames have exported XYZ; 360 have raw model output; implausible_prediction",
+   "playback_path": "gallery-v2-01-03/playback.mp4",
+   "playback_sha256": "070b4541bfe04c2e6be7090af4d21be77dd6361e869218fc532864810f1c6474",
+   "result_path": "gallery-v2-01-03/result.json",
+   "result_sha256": "dcd2370f98a6a577f20d41bb390b23766e454c22821fbcef01276beb54412f68",
+   "rights": {
+    "local_use": "permitted",
+    "redistribution": "unknown",
+    "source_url": "https://www.youtube.com/watch?v=Mo3COU35RNQ"
+   },
+   "source_path": "gallery-v2-01-03/source.mp4",
+   "source_sha256": "2b282de24d1f995683e9f0e36e2d8f91049b1b2284a4b54fbbbb5ac121db6678",
+   "timeline_path": "gallery-v2-01-03/timeline.json",
+   "timeline_sha256": "9a29b2e0bba5c6152d9f037c6a1d9e319a566b60b70da7c5c9f569d12c54ae52",
+   "title": "Indian Wells 2012 · Federer v Nadal · 7:24–7:30"
+  },
+  {
+   "id": "gallery-v2-01-04",
+   "media_offset_s": 0.0,
+   "note": "partial: 882 of 900 source frames have exported XYZ; 898 have raw model output; implausible_prediction, invalid_camera, window_disagreement",
+   "playback_path": "gallery-v2-01-04/playback.mp4",
+   "playback_sha256": "090188f0e5b218ac6013ec834f238c4771cbc1ce2e35673070d7d63e1ac36fba",
+   "result_path": "gallery-v2-01-04/result.json",
+   "result_sha256": "1fed7603de6388808a6a0582be46501261e6dc48a8a28b1f937434e0aeccab32",
+   "rights": {
+    "local_use": "permitted",
+    "redistribution": "unknown",
+    "source_url": "https://www.youtube.com/watch?v=Mo3COU35RNQ"
+   },
+   "source_path": "gallery-v2-01-04/source.mp4",
+   "source_sha256": "fd6cbdb7d360106b6128cb537c6a957b91ac525b1b2cf0b51aa16715a9b09c6d",
+   "timeline_path": "gallery-v2-01-04/timeline.json",
+   "timeline_sha256": "c9042647cf570b2b5b2a41859fc080516814ce3bf33b6d77030f9f1724f76ab8",
+   "title": "Indian Wells 2012 · Federer v Nadal · 11:08–11:23"
+  },
+  {
+   "id": "gallery-v2-02-01",
+   "media_offset_s": 0.0,
+   "note": "partial: 348 of 350 source frames have exported XYZ; 350 have raw model output; window_disagreement",
+   "playback_path": "gallery-v2-02-01/playback.mp4",
+   "playback_sha256": "2bcb2b8b772e1d45c163ae84f84b578e025eeed0e2aa9cac670f2a60e92939b6",
+   "result_path": "gallery-v2-02-01/result.json",
+   "result_sha256": "71c173b291a2a81e76cd8f01daeaf050259819efeee11280474ada005c7c8055",
+   "rights": {
+    "local_use": "permitted",
+    "redistribution": "unknown",
+    "source_url": "https://www.youtube.com/watch?v=WfxpIK_TvEQ"
+   },
+   "source_path": "gallery-v2-02-01/source.mp4",
+   "source_sha256": "144e04bb71d6f0e7aa6a605575e1bc0f7bcdb919f0a60d85e9197b5c1b0486d7",
+   "timeline_path": "gallery-v2-02-01/timeline.json",
+   "timeline_sha256": "8a89b452ab452c09c1300cb04918fb60b131961142a226bc6d914002a79193f3",
+   "title": "Roland-Garros 2026 final · Cobolli v Zverev · 0:13–0:20"
+  },
+  {
+   "id": "gallery-v2-02-02",
+   "media_offset_s": 0.0,
+   "note": "partial: 595 of 600 source frames have exported XYZ; 600 have raw model output; implausible_prediction",
+   "playback_path": "gallery-v2-02-02/playback.mp4",
+   "playback_sha256": "2c59615e42823d6f563ace6d268eced4d220cc19c73283931b39d1fbd7cfd6b0",
+   "result_path": "gallery-v2-02-02/result.json",
+   "result_sha256": "ebc19e081b44c6bd174751a56a33629a81999fe6dd45aa88a34b60145e5262da",
+   "rights": {
+    "local_use": "permitted",
+    "redistribution": "unknown",
+    "source_url": "https://www.youtube.com/watch?v=WfxpIK_TvEQ"
+   },
+   "source_path": "gallery-v2-02-02/source.mp4",
+   "source_sha256": "6ba80beb8533f487143958aa9bd75d04ccb0fb8d6403455581d531af1da9b7f2",
+   "timeline_path": "gallery-v2-02-02/timeline.json",
+   "timeline_sha256": "0d297029e77fd20c04aeb1d7bfaca39b05b2ed9e947dab1f49fbef9219912c83",
+   "title": "Roland-Garros 2026 final · Cobolli v Zverev · 2:11–2:23"
+  },
+  {
+   "id": "gallery-v2-02-03",
+   "media_offset_s": 0.0,
+   "note": "partial: 18 of 150 source frames have exported XYZ; 140 have raw model output; ambiguous_track, implausible_prediction, invalid_camera, long_gap",
+   "playback_path": "gallery-v2-02-03/playback.mp4",
+   "playback_sha256": "946f0c96ee59ae1509d1f6097886cc84f3e142b132d7570e6d06b9af7ba55157",
+   "result_path": "gallery-v2-02-03/result.json",
+   "result_sha256": "1db8bcce1da69a8fcb2d5801a64139fe4a4f1b3e49cb56dcee49de097da65163",
+   "rights": {
+    "local_use": "permitted",
+    "redistribution": "unknown",
+    "source_url": "https://www.youtube.com/watch?v=WfxpIK_TvEQ"
+   },
+   "source_path": "gallery-v2-02-03/source.mp4",
+   "source_sha256": "40deed065832b931748102f52e4077a1f3b84cb99b07d1a6325710209d9c7441",
+   "timeline_path": "gallery-v2-02-03/timeline.json",
+   "timeline_sha256": "c57f160ad6358775f5f40002dc820b2a3afd982b794e9f55c212b3a134376e19",
+   "title": "Roland-Garros 2026 final · Cobolli v Zverev · 4:17–4:20"
+  },
+  {
+   "id": "gallery-v2-02-04",
+   "media_offset_s": 0.0,
+   "note": "partial: 252 of 300 source frames have exported XYZ; 294 have raw model output; implausible_prediction, invalid_camera",
+   "playback_path": "gallery-v2-02-04/playback.mp4",
+   "playback_sha256": "032eee18203d0cd4791a5dd7dcc97f4b916daf592c06e5ed8dd9b4255d418265",
+   "result_path": "gallery-v2-02-04/result.json",
+   "result_sha256": "20d91c1bc7e2771c7f3269d1fee04405303591bca5c3b40a3e4457aa78868af9",
+   "rights": {
+    "local_use": "permitted",
+    "redistribution": "unknown",
+    "source_url": "https://www.youtube.com/watch?v=WfxpIK_TvEQ"
+   },
+   "source_path": "gallery-v2-02-04/source.mp4",
+   "source_sha256": "f875e54b3cc664bee051b6c83c7c8f1d52a5996c3c6df370ca14a8169c80fbd9",
+   "timeline_path": "gallery-v2-02-04/timeline.json",
+   "timeline_sha256": "366e687db87f28076428a9ff30797085eabd06255ccd167cfb01390d36d0a715",
+   "title": "Roland-Garros 2026 final · Cobolli v Zverev · 7:07–7:13"
+  },
+  {
+   "id": "gallery-v2-03-01",
+   "media_offset_s": 0.0,
+   "note": "partial: 374 of 375 source frames have exported XYZ; 374 have raw model output; invalid_camera",
+   "playback_path": "gallery-v2-03-01/playback.mp4",
+   "playback_sha256": "a4dc33724ffbb54befded6c5a8cd2370b3fa23ebf3a5bbaf71cf5df6385434c7",
+   "result_path": "gallery-v2-03-01/result.json",
+   "result_sha256": "3a3f4da15d4afb1f1034a1cee5d0f2be03b3c5749457c6ae9dc01d988c2f4e7f",
+   "rights": {
+    "local_use": "permitted",
+    "redistribution": "unknown",
+    "source_url": "https://www.youtube.com/watch?v=aERKJuBtIGw"
+   },
+   "source_path": "gallery-v2-03-01/source.mp4",
+   "source_sha256": "a0afe2f50f14b42c3affb6c1f08895c8b4936e4490e0f2f2cb1a65ce8b847a3c",
+   "timeline_path": "gallery-v2-03-01/timeline.json",
+   "timeline_sha256": "51be40cf14b471b35437bf6dd0a901e9737b3a5f6d5ccf98327dcd2a53729ed1",
+   "title": "Roland-Garros 2025 final · Sinner v Alcaraz · 0:18–0:33"
+  },
+  {
+   "id": "gallery-v2-03-02",
+   "media_offset_s": 0.0,
+   "note": "ok: 150 of 150 source frames have exported XYZ; 150 have raw model output",
+   "playback_path": "gallery-v2-03-02/playback.mp4",
+   "playback_sha256": "7db44df8d0a447a7c08cc8b0020aa4035ac6a3ae37dbada19fb0a46b5ae08806",
+   "result_path": "gallery-v2-03-02/result.json",
+   "result_sha256": "502803017e90c2522a26e80649b980516dee552984b68f2f9d2bf8a59b9ea56c",
+   "rights": {
+    "local_use": "permitted",
+    "redistribution": "unknown",
+    "source_url": "https://www.youtube.com/watch?v=aERKJuBtIGw"
+   },
+   "source_path": "gallery-v2-03-02/source.mp4",
+   "source_sha256": "2eb36250ede32e0a3bcff06c4ebdcfc81b57a9dd27a65b1f9b1cdc2493b78f91",
+   "timeline_path": "gallery-v2-03-02/timeline.json",
+   "timeline_sha256": "42bc89967bcea7b4540af251bbbc4e70a219b2c41391863a1c0a648752697dec",
+   "title": "Roland-Garros 2025 final · Sinner v Alcaraz · 1:45–1:51"
+  },
+  {
+   "id": "gallery-v2-03-03",
+   "media_offset_s": 0.0,
+   "note": "partial: 297 of 300 source frames have exported XYZ; 297 have raw model output; invalid_camera",
+   "playback_path": "gallery-v2-03-03/playback.mp4",
+   "playback_sha256": "4cd8f1f2c26164f4d3da55fe739a258c37461d645eda6241772eab33f52457fa",
+   "result_path": "gallery-v2-03-03/result.json",
+   "result_sha256": "76d4e93c177fd24f87b25c04b7b2a9c91d2bf2b2505db94cb12e2138abf1e3f5",
+   "rights": {
+    "local_use": "permitted",
+    "redistribution": "unknown",
+    "source_url": "https://www.youtube.com/watch?v=aERKJuBtIGw"
+   },
+   "source_path": "gallery-v2-03-03/source.mp4",
+   "source_sha256": "7c7922bebc4c89436e999e54e5c79c83fc85169f3a5d31d943e6e79eeecb9642",
+   "timeline_path": "gallery-v2-03-03/timeline.json",
+   "timeline_sha256": "49e4d5596ae1d3d6b1c6ed88db7c829b76ec7bbff8b3f642b9c354b95f7f5116",
+   "title": "Roland-Garros 2025 final · Sinner v Alcaraz · 3:10–3:22"
+  },
+  {
+   "id": "gallery-v2-03-04",
+   "media_offset_s": 0.0,
+   "note": "ok: 225 of 225 source frames have exported XYZ; 225 have raw model output",
+   "playback_path": "gallery-v2-03-04/playback.mp4",
+   "playback_sha256": "a173c35f8b0fd1a26bad175bc005d7c6be939f07e61e8d0e3e14af3b02603697",
+   "result_path": "gallery-v2-03-04/result.json",
+   "result_sha256": "caf81e8b5e2715ebad570c2248776abc05ac96275015828fc6db5e62bbd5f3f9",
+   "rights": {
+    "local_use": "permitted",
+    "redistribution": "unknown",
+    "source_url": "https://www.youtube.com/watch?v=aERKJuBtIGw"
+   },
+   "source_path": "gallery-v2-03-04/source.mp4",
+   "source_sha256": "46916bb3c0f04c0122a477f36ed379e4abeaea179c61afe7a82bce906b4659a0",
+   "timeline_path": "gallery-v2-03-04/timeline.json",
+   "timeline_sha256": "58a4a3f3e181d45a1b2e397f05c615158525c4865aab29f8cf81449ee0290c90",
+   "title": "Roland-Garros 2025 final · Sinner v Alcaraz · 7:04–7:13"
+  },
+  {
+   "id": "gallery-v2-04-01",
+   "media_offset_s": 0.0,
+   "note": "partial: 269 of 360 source frames have exported XYZ; 359 have raw model output; implausible_prediction, invalid_camera, long_gap, window_disagreement",
+   "playback_path": "gallery-v2-04-01/playback.mp4",
+   "playback_sha256": "1a22ddd76cbdb3fab4899a2428ec40356e62f46cadc804f1ec9555fc5b502ee4",
+   "result_path": "gallery-v2-04-01/result.json",
+   "result_sha256": "64fba47fc6d276ce0ecc5cf55d3371020b34b9004d4094c7bcd578e7911cd083",
+   "rights": {
+    "local_use": "permitted",
+    "redistribution": "unknown",
+    "source_url": "https://www.youtube.com/watch?v=YCAQnmJBJIk"
+   },
+   "source_path": "gallery-v2-04-01/source.mp4",
+   "source_sha256": "8669278c38e7135e9fe2952b2de09f598e2ef7d88a855c87b40ce72c9aed766e",
+   "timeline_path": "gallery-v2-04-01/timeline.json",
+   "timeline_sha256": "0487aa7077db37f52709eb807a487212c3fb416ab33a22d7856e0d299dc9032d",
+   "title": "US Open 2026 final · Sabalenka v Rybakina · 0:23–0:29"
+  },
+  {
+   "id": "gallery-v2-04-02",
+   "media_offset_s": 0.0,
+   "note": "ok: 360 of 360 source frames have exported XYZ; 360 have raw model output",
+   "playback_path": "gallery-v2-04-02/playback.mp4",
+   "playback_sha256": "da1c1309eba35e8ef1486b5286002046de6fd3e64320c3078ca7d72e6bad6dea",
+   "result_path": "gallery-v2-04-02/result.json",
+   "result_sha256": "63a3c82a136bb4bbfd1694a8f0b0597f91da85b3f59f75039b6937260b304b4c",
+   "rights": {
+    "local_use": "permitted",
+    "redistribution": "unknown",
+    "source_url": "https://www.youtube.com/watch?v=YCAQnmJBJIk"
+   },
+   "source_path": "gallery-v2-04-02/source.mp4",
+   "source_sha256": "9ea4a1a77d4bfe209ca8220ed28df2d9b451341b51a1053d61a8eebbcd66f0b2",
+   "timeline_path": "gallery-v2-04-02/timeline.json",
+   "timeline_sha256": "2b81283772fcc8b0afab5eea8c5b70feb7e2183d5d9e75947eda860b27697eb7",
+   "title": "US Open 2026 final · Sabalenka v Rybakina · 1:12–1:18"
+  },
+  {
+   "id": "gallery-v2-04-03",
+   "media_offset_s": 0.0,
+   "note": "partial: 762 of 899 source frames have exported XYZ; 895 have raw model output; ambiguous_track, implausible_prediction, invalid_camera, long_gap, window_disagreement",
+   "playback_path": "gallery-v2-04-03/playback.mp4",
+   "playback_sha256": "0ad7da90a7ff9fa3913ce9e94fd118c1a4f2730d7eefa46d52fa598dab0fc46a",
+   "result_path": "gallery-v2-04-03/result.json",
+   "result_sha256": "bbecd3f6bab1805690f76a0f17de8fbede37839665c5c1283ea41ae5492b4ee5",
+   "rights": {
+    "local_use": "permitted",
+    "redistribution": "unknown",
+    "source_url": "https://www.youtube.com/watch?v=YCAQnmJBJIk"
+   },
+   "source_path": "gallery-v2-04-03/source.mp4",
+   "source_sha256": "1d6a0354e3d76c2264001ed21929cb95f294ac912dc68e8c71d73583eaac58a5",
+   "timeline_path": "gallery-v2-04-03/timeline.json",
+   "timeline_sha256": "7d070a72dd647af2bda3e377b6139c5d401ee155d68e6196bc4fa913d20b8e48",
+   "title": "US Open 2026 final · Sabalenka v Rybakina · 2:08–2:23"
+  },
+  {
+   "id": "gallery-v2-04-04",
+   "media_offset_s": 0.0,
+   "note": "partial: 683 of 720 source frames have exported XYZ; 720 have raw model output; ambiguous_track, long_gap, window_disagreement",
+   "playback_path": "gallery-v2-04-04/playback.mp4",
+   "playback_sha256": "bbb604fc38594ff6e7104dc0e0f870e050be36a21646729b36a779969c648bb2",
+   "result_path": "gallery-v2-04-04/result.json",
+   "result_sha256": "0eee50c4cd49bea1a8a25a7f540e84490b7b9c92b6ac3de29e9b51665a1617ae",
+   "rights": {
+    "local_use": "permitted",
+    "redistribution": "unknown",
+    "source_url": "https://www.youtube.com/watch?v=YCAQnmJBJIk"
+   },
+   "source_path": "gallery-v2-04-04/source.mp4",
+   "source_sha256": "ea33b70ae924cba3e854d716f284189905279555972cd5c3669e7a88d6793399",
+   "timeline_path": "gallery-v2-04-04/timeline.json",
+   "timeline_sha256": "431c7086a19457806995dca8752a69798f8fd04eeca38ea7aab23af3a38b972d",
+   "title": "US Open 2026 final · Sabalenka v Rybakina · 2:33–2:45"
+  },
+  {
+   "id": "gallery-v2-05-01",
+   "media_offset_s": 0.0,
+   "note": "partial: 797 of 800 source frames have exported XYZ; 800 have raw model output; implausible_prediction",
+   "playback_path": "gallery-v2-05-01/playback.mp4",
+   "playback_sha256": "77bcebdc980a671fa6bd2fa7b8d67b410999ec753e6a65ee155f2591b0df8c7b",
+   "result_path": "gallery-v2-05-01/result.json",
+   "result_sha256": "7ee149e41bad7db1782e86f6360872b1d2429e9cd5d14e1841853279532a3651",
+   "rights": {
+    "local_use": "permitted",
+    "redistribution": "unknown",
+    "source_url": "https://www.youtube.com/watch?v=8Dc6BvkUEZM"
+   },
+   "source_path": "gallery-v2-05-01/source.mp4",
+   "source_sha256": "bd76a7e52219b0002c456ca9b214a2af6281685d346ac599ad876ecf35b614bd",
+   "timeline_path": "gallery-v2-05-01/timeline.json",
+   "timeline_sha256": "b898a45c5e2aa0e6d222ae4d45f2f1e2188854273b9f7f022dc4e549decd3402",
+   "title": "Beijing 2026 final · Djokovic v de Minaur · 0:45–1:01"
+  },
+  {
+   "id": "gallery-v2-05-02",
+   "media_offset_s": 0.0,
+   "note": "partial: 1249 of 1250 source frames have exported XYZ; 1250 have raw model output; implausible_prediction, window_disagreement",
+   "playback_path": "gallery-v2-05-02/playback.mp4",
+   "playback_sha256": "30edba2dfbb0b7b50e101f7c073cbc8bae5c89a3190df963b01019f1e3d4bf80",
+   "result_path": "gallery-v2-05-02/result.json",
+   "result_sha256": "67df7c7ea2103bce93e34322ecb9503c63b2d17c8bf7df07d5f03647f0e1327c",
+   "rights": {
+    "local_use": "permitted",
+    "redistribution": "unknown",
+    "source_url": "https://www.youtube.com/watch?v=8Dc6BvkUEZM"
+   },
+   "source_path": "gallery-v2-05-02/source.mp4",
+   "source_sha256": "ae4561689fa1b4163623cc921f7a3bf591148948e9b82a67b8dc8236f8c14abb",
+   "timeline_path": "gallery-v2-05-02/timeline.json",
+   "timeline_sha256": "baaf16c154e8dc259db5f5a1642caaecf120572f414f61987a91fdcf4b050bf1",
+   "title": "Beijing 2026 final · Djokovic v de Minaur · 1:06–1:31"
+  },
+  {
+   "id": "gallery-v2-05-03",
+   "media_offset_s": 0.0,
+   "note": "partial: 440 of 450 source frames have exported XYZ; 450 have raw model output; long_gap",
+   "playback_path": "gallery-v2-05-03/playback.mp4",
+   "playback_sha256": "565abfc6c58da0adac1d04721445bab56bf68c01a1023001fbe4f262856e73b0",
+   "result_path": "gallery-v2-05-03/result.json",
+   "result_sha256": "9bdcd72f845a63b9f9ba4080e69c5ee5383f9b2eab9165c62fc302871c56c043",
+   "rights": {
+    "local_use": "permitted",
+    "redistribution": "unknown",
+    "source_url": "https://www.youtube.com/watch?v=8Dc6BvkUEZM"
+   },
+   "source_path": "gallery-v2-05-03/source.mp4",
+   "source_sha256": "7e5c1a842735924328f94b524126d28967c374ad6b537d7b99002ae2d3bc839a",
+   "timeline_path": "gallery-v2-05-03/timeline.json",
+   "timeline_sha256": "17aaffcc7eacdac0789f3243f3fcb04de945141d6962830cc142a66faad2ff90",
+   "title": "Beijing 2026 final · Djokovic v de Minaur · 1:38–1:47"
+  },
+  {
+   "id": "gallery-v2-05-04",
+   "media_offset_s": 0.0,
+   "note": "partial: 1261 of 1300 source frames have exported XYZ; 1300 have raw model output; implausible_prediction, window_disagreement",
+   "playback_path": "gallery-v2-05-04/playback.mp4",
+   "playback_sha256": "44489b566eecaa54b16482b56416953fd6d6e5446208ee5c2d6a6994ad6b68da",
+   "result_path": "gallery-v2-05-04/result.json",
+   "result_sha256": "6e6775f3c0ed6351f5f63f578d856a89b3864f510360add810f2329047f5371b",
+   "rights": {
+    "local_use": "permitted",
+    "redistribution": "unknown",
+    "source_url": "https://www.youtube.com/watch?v=8Dc6BvkUEZM"
+   },
+   "source_path": "gallery-v2-05-04/source.mp4",
+   "source_sha256": "f07d8f8c749e76f4a8272263bdc217c77ae66d1ac0bf6931df56497991045b09",
+   "timeline_path": "gallery-v2-05-04/timeline.json",
+   "timeline_sha256": "51c024694b54a0dba02f516ca1a820456a7d0b6f6dac00543595b3024ff0795b",
+   "title": "Beijing 2026 final · Djokovic v de Minaur · 4:15–4:41"
+  }
+ ],
+ "schema_version": 1
+}

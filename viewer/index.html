@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; font-src data:; connect-src 'self'; media-src 'self' blob:; worker-src 'none'">
+<title>Tennis3D</title><style>/* INLINE_STYLE */</style>
+</head>
+<body>
+<header class="topbar"><a class="brand" href="#"><span class="brand-mark" aria-hidden="true">T3</span><span>Tennis<b>3D</b></span></a><nav aria-label="Sections"><a href="#viewer">Viewer</a><a href="#frames-detail">Frames</a><a href="#about">About</a></nav><span id="connection" class="state">Local playback</span></header>
+<main class="page">
+<section class="hero"><h1>Your rally, in 3D</h1><p>One camera in, a metric 3D ball path out, played back beside the source video.</p></section>
+<p id="error" role="alert" hidden></p>
+<section class="card launch-panel" aria-label="Reconstruct a video" id="launch" hidden>
+<div class="card-head"><h2>Start with a video</h2><span>Stays on this computer</span></div>
+<div class="launch-body"><div><p>Choose a short, single-camera singles rally with a visible court. Your video stays on this computer.</p><p id="runtime" class="muted"></p></div>
+<div class="launch-actions"><label class="button primary">Choose video<input id="upload" type="file" accept="video/*,.mkv,.avi,.mov,.mp4,.webm"></label><label class="device-label">Process with <select id="device"><option value="auto">Automatic</option><option value="cpu">CPU</option><option value="cuda">NVIDIA GPU</option></select></label></div></div>
+</section>
+<div class="app-layout">
+<aside class="library" id="library" hidden aria-label="Saved runs and examples"><div class="library-head" id="saved-runs-heading"><h2>Saved runs</h2><span id="runs-count" class="muted"></span></div><p id="runs-empty" class="muted">Your processed videos will appear here.</p><div id="runs" class="run-list"></div><div class="library-head gallery-heading"><h2>Examples</h2><span id="gallery-count" class="muted"></span></div><p id="gallery-empty" class="muted">No precomputed examples installed.</p><div id="gallery" class="run-list"></div></aside>
+<div class="viewer" id="viewer">
+<div class="file-actions"><label class="button soft">Open result JSON<input id="file" type="file" accept=".json,application/json"></label><label class="button soft">Add playback video<input id="video-file" type="file" accept="video/*,.mkv,.avi"></label><button id="demo" class="soft">Load example</button><button id="export" class="soft" disabled>Export JSON</button></div>
+<section id="processing" class="card processing" aria-label="Processing status" aria-live="polite" hidden><div class="card-head"><h2 id="run-name"></h2><span id="run-status"></span></div><div class="processing-body"><p id="run-stage"></p><progress id="run-progress" max="1" value="0"></progress><p id="run-progress-text" class="muted"></p><p id="run-error" class="failure" hidden></p><div class="run-actions"><button id="start" class="primary" hidden>Start reconstruction</button><button id="cancel" hidden>Cancel</button><button id="delete" hidden>Delete</button></div></div></section>
+<div class="card result-card">
+<div class="card-head heading"><p id="source">Open a result or choose an example to explore a trajectory.</p><span id="kind">No file loaded</span></div>
+<div class="workspace">
+<section class="source-panel" id="source-panel" aria-label="Source video"><div class="panel-title"><h2>Source video</h2><span id="video-label">Optional playback</span></div><video id="video" controls playsinline preload="metadata"></video><div id="video-empty" class="empty-video"><span class="play-glyph" aria-hidden="true"></span><p>Source video will appear here.</p><p class="muted">For a local result, add its matching video.</p></div><p id="video-error" class="failure" role="alert" hidden></p></section>
+<section class="court-panel" aria-label="3D playback"><div class="panel-title"><h2>Reconstruction</h2><span>Metres</span></div><div class="stage"><div id="scene"></div><div class="view-buttons segments" aria-label="Camera presets"><button data-view="perspective">Perspective</button><button data-view="top">Top</button><button data-view="side">Side</button><button data-view="perspective">Reset view</button></div><p class="axis-note">X across · Y along · Z up<br>Drag to orbit. Scroll or pinch to zoom.</p></div></section>
+<aside id="diagnostic" hidden><h2>Synthetic projections</h2><canvas id="projection" aria-label="Synthetic 2D court and ball projections"></canvas><p>○ Clean ball &nbsp; <span class="inferred">× Observed ball</span><br>Court labels follow landmark indices 0–13.</p><p id="projection-time"></p><p id="projection-state"></p><h2>Events</h2><p>Select an event to seek. Markers appear as playback reaches each event.</p><div id="events"></div></aside>
+<section class="transport" aria-label="Playback controls"><div class="timeline"><button id="frame-back" title="Previous source frame" aria-label="Previous source frame" disabled>← Frame</button><button id="play" disabled>Play</button><button id="frame-forward" title="Next source frame" aria-label="Next source frame" disabled>Frame →</button><input id="time" type="range" min="0" max="0" step="any" value="0" aria-label="Playback time" disabled><output id="timestamp">0.000 / 0.000 s</output></div><div class="options"><label>Speed <select id="speed"><option value="0.25">0.25×</option><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option><option value="4">4×</option></select></label><label>Trail <select id="trail"><option value="0">Off</option><option value="0.5">0.5 s</option><option value="2" selected>2 s</option><option value="1000000">Full</option></select></label><label class="checkbox"><input id="court" type="checkbox" checked> Court</label><span class="legend"><span><i class="swatch estimated"></i>Estimated</span><span><i class="swatch dashed"></i>Inferred</span><span>Gap = hidden ball</span></span></div><div class="readouts"><output id="position">XYZ unavailable</output><output id="state">No source frame</output><output id="source-timing" hidden></output></div></section>
+</div>
+<section id="result-summary" class="result-summary" hidden aria-label="Result coverage"><div id="coverage"></div><p id="result-message"></p><div id="failure-reasons" class="failure" hidden></div></section>
+<p class="card-foot note">The model estimates the ball's path. Inferred rows have no accepted 2D ball observation. Gaps have no usable XYZ; playback never draws a line across them. The ball marker is enlarged 5× for visibility.</p>
+</div>
+<details id="frames-detail"><summary>Inspect source frames</summary><div class="frame-tools"><label>Show <select id="frame-filter"><option value="all">All rows</option><option value="estimated">Valid observations</option><option value="inferred">Inferred rows</option><option value="unavailable">Gaps</option></select></label><span id="frame-count"></span><button id="frames-prev">Previous</button><button id="frames-next">Next</button></div><div class="card table-scroll"><table><thead><tr><th>Frame</th><th>Time, s</th><th>Reconstruction</th><th>Observation</th><th>XYZ, m</th><th>Reason</th></tr></thead><tbody id="frame-rows"></tbody></table></div></details>
+<details><summary>Result metadata</summary><pre id="metadata">No file loaded.</pre></details><details id="about"><summary>About and licenses</summary><p>Tennis3D is a local video reconstruction app. Project code and project-owned model weights are licensed GPL-3.0-only. Video clips and third-party weights retain their own rights and notices.</p><p>The interface is set in Google Sans Code, embedded in this page under the SIL Open Font License 1.1.</p><details><summary>Bundled dependency and font licenses</summary><!-- LICENSES --></details></details>
+</div></div>
+<footer class="foot"><span id="privacy">Local playback. Selected files stay in this browser.</span><span>Tennis3D · GPL-3.0-only</span></footer>
+</main>
+<!-- EMBEDDED_GALLERY -->
+<script>/* INLINE_SCRIPT */</script>
+</body></html>

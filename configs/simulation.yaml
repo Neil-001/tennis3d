@@ -1,0 +1,7 @@
+# Small stage-1 smoke set. Larger main-scale generation is a later stage.
+seed: 42
+train_rallies: 4
+val_rallies: 1
+test_rallies: 1
+pool_size: 24
+views_per_rally: 2

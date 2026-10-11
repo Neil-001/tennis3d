@@ -1,0 +1,26 @@
+# Small execution defaults; raise step/time limits explicitly for a later run.
+train_manifest: data/synthetic/train.manifest.json
+val_manifest: data/synthetic/val.manifest.json
+model:
+  width: 176
+  depth: 4
+  heads: 11
+  mlp_ratio: 3
+  dropout: 0.0
+  gated_ffn: true
+  gated_head: true
+  temporal_bias: true
+  schedule_steps: 2000
+  outward_radial_brake: 0.5
+  batched_muon: true
+batch_size: 48
+min_frames: 20
+max_frames: 250
+learning_rate: 0.0016
+ema_decay: 0.99
+gradient_clip: 5.0
+max_steps: 1000
+max_train_seconds: 300.0
+max_job_seconds: 172800.0
+validation_every: 100
+seed: 42

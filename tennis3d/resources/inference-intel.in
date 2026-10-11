@@ -1,0 +1,7 @@
+# Linux x86_64 only. Preserve the ordinary CPU dependency versions and hashes.
+# uv pip compile inference-intel.in --universal --python-version 3.11 --generate-hashes \
+#   --extra-index-url https://download.pytorch.org/whl/cpu --index-strategy unsafe-best-match
+# Keep inference-cpu.txt byte-for-byte in the final lock; append only the generated
+# OpenVINO additions. Compilation can omit CPU-index hashes for inherited packages.
+-r inference-cpu.txt
+openvino==2026.4.1 ; sys_platform == 'linux' and platform_machine == 'x86_64'

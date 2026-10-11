@@ -1,0 +1,2 @@
+# Install only in a separate login-host monitoring environment.
+wandb==0.30.0

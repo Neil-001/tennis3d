@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "recipe": "configs/stage4-preparation-main-v1/full-run.yaml",
+  "descriptor": "configs/stage4-preparation-main-v1/train.source.json",
+  "descriptor_sha256": "a6aa8ba11adda8b6a5f6bf39277de1f73dd24338db80907a4dce8a3d293e27a1",
+  "revision": "c2e782053694cfde305362e670ebbb4f4e70884c",
+  "manifest_sha256": "b32fe9cc97226c9d67468bcf7724f7d3ffc8924541798796744f9ba62bba6707",
+  "membership_sha256": "0ae6e62ead86a3a5869ec77199890732a6c4fdb79332a42ffc400ac9ebbd7f15",
+  "steps": 128,
+  "batch_size": 48,
+  "max_frames": 250,
+  "schedule_steps": 83334,
+  "primary_seed": 42,
+  "threads": 4,
+  "memory_bytes": 34359738368,
+  "cache_bytes": 4294967296,
+  "prefetch_bytes": 67108864,
+  "prefetch_depth": 2,
+  "worker_timeout_seconds": 360,
+  "job_seconds": 3600,
+  "gpu": "NVIDIA GeForce RTX 2080 Ti",
+  "torch": "2.10.0+cu126",
+  "cuda": "12.6",
+  "paired_rounds": 2,
+  "eviction_shards": 16,
+  "workloads": [
+    {
+      "id": "warm-transition-42",
+      "seed": 42,
+      "boundary": 1,
+      "condition": "warm"
+    },
+    {
+      "id": "evicted-transfer-137",
+      "seed": 137,
+      "boundary": 100,
+      "condition": "evicted"
+    }
+  ],
+  "steady_skip_steps": 8,
+  "pair_order": "workload-grouped-ab-ba",
+  "evicted_cache": "minimal-survivor-pressure-v1",
+  "audit_mode": "independent-replay",
+  "inline_audit_ceiling_fraction": 0.01
+}

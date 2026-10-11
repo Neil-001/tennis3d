@@ -1,0 +1,20 @@
+{
+  "cache_bytes": 1073741824,
+  "cache_dir": "../../runs/stage4-final-test-cache",
+  "exclude_rally_ids": [],
+  "manifest": {
+    "path": "dataset/manifest.json",
+    "sha256": "b32fe9cc97226c9d67468bcf7724f7d3ffc8924541798796744f9ba62bba6707",
+    "size_bytes": 103681865
+  },
+  "max_group_bytes": 268435456,
+  "repo_id": "N-il/tennis-3d-synthetic",
+  "retries": 2,
+  "revision": "c2e782053694cfde305362e670ebbb4f4e70884c",
+  "root": null,
+  "source_version": 1,
+  "split": "test",
+  "subset_sha256": null,
+  "timeout_seconds": 30,
+  "transfer_seconds": 600
+}

@@ -1,0 +1,130 @@
+{
+  "schema_version": "1.0",
+  "status": "partial",
+  "source": {
+    "name": "hand-authored-viewer-fixture",
+    "sha256": "671f4f4bc4df560aeabb7401826a0a9864fb245531a241d045e6ccf4084a459f",
+    "width": 640,
+    "height": 360,
+    "frame_count": 6,
+    "time_origin_s": 12.5,
+    "time_base": [
+      1,
+      1000
+    ]
+  },
+  "coordinates": {
+    "units": "m",
+    "origin": "court_center_ground",
+    "axes": {
+      "x": "across_court",
+      "y": "along_court",
+      "z": "up"
+    },
+    "near_baseline": "negative_y",
+    "point": "ball_center"
+  },
+  "court": {
+    "length_m": 23.77,
+    "singles_width_m": 8.23,
+    "doubles_width_m": 10.97,
+    "service_line_distance_m": 6.4
+  },
+  "frames": [
+    {
+      "frame_index": 0,
+      "t_s": 0.0,
+      "xyz_m": [
+        0.4,
+        -8.2,
+        1.3
+      ],
+      "observation": "detected",
+      "reconstruction": "estimated",
+      "camera_valid": true,
+      "reason_codes": [],
+      "duplicate_of": null
+    },
+    {
+      "frame_index": 1,
+      "t_s": 0.04,
+      "xyz_m": [
+        0.45,
+        -7.8,
+        1.4
+      ],
+      "observation": "detected",
+      "reconstruction": "estimated",
+      "camera_valid": true,
+      "reason_codes": [],
+      "duplicate_of": null
+    },
+    {
+      "frame_index": 2,
+      "t_s": 0.08,
+      "xyz_m": [
+        0.5,
+        -7.4,
+        1.48
+      ],
+      "observation": "duplicate",
+      "reconstruction": "inferred",
+      "camera_valid": true,
+      "reason_codes": [],
+      "duplicate_of": 1
+    },
+    {
+      "frame_index": 3,
+      "t_s": 0.12,
+      "xyz_m": null,
+      "observation": "missing",
+      "reconstruction": "unavailable",
+      "camera_valid": true,
+      "reason_codes": [
+        "long_gap"
+      ],
+      "duplicate_of": null
+    },
+    {
+      "frame_index": 4,
+      "t_s": 0.16,
+      "xyz_m": null,
+      "observation": "missing",
+      "reconstruction": "unavailable",
+      "camera_valid": false,
+      "reason_codes": [
+        "invalid_camera"
+      ],
+      "duplicate_of": null
+    },
+    {
+      "frame_index": 5,
+      "t_s": 0.2,
+      "xyz_m": [
+        0.65,
+        -6.2,
+        1.65
+      ],
+      "observation": "detected",
+      "reconstruction": "estimated",
+      "camera_valid": true,
+      "reason_codes": [],
+      "duplicate_of": null
+    }
+  ],
+  "summary": {
+    "valid_frame_fraction": 0.6666666666666666,
+    "detected_frame_fraction": 0.5
+  },
+  "provenance": {
+    "lifter_checkpoint_sha256": null,
+    "config_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "calibration_mode": "synthetic",
+    "calibration_assumptions": [
+      "Hand-authored fixture; no decoded video or calibrated camera."
+    ],
+    "trajectory_kind": "fixture",
+    "code_revision": null
+  },
+  "failure_reasons": []
+}

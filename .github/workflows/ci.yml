@@ -1,0 +1,40 @@
+name: CPU checks
+on:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  cpu:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.12']
+    env:
+      OMP_NUM_THREADS: '2'
+      MKL_NUM_THREADS: '2'
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@d0cc045d04ccac9d8b7881df0226f9e82c39688e # v6
+        with:
+          version: '0.12.18'
+          python-version: ${{ matrix.python }}
+      - run: uv lock --check
+      - run: uv sync --locked --extra perception --extra synthetic --extra lifting --extra data --extra intel
+      - run: uv run ruff check .
+      - run: uv run ruff format --check .
+      - run: uv run --extra perception --extra synthetic --extra lifting --extra data --extra intel ty check
+      - run: uv run --extra perception --extra synthetic --extra lifting --extra data --extra intel pytest
+      - run: uv run tennis3d doctor --device cpu
+      - run: uv run tennis3d --version
+      - run: uv build
+      - name: Install wheel without developer dependencies
+        run: |
+          uv venv /tmp/tennis3d-wheel
+          uv pip install --python /tmp/tennis3d-wheel/bin/python dist/*.whl
+          cd /tmp
+          /tmp/tennis3d-wheel/bin/tennis3d version
+          /tmp/tennis3d-wheel/bin/tennis3d doctor --device cpu
+          # Packaged page, manifests and settings must not depend on the checkout.
+          /tmp/tennis3d-wheel/bin/python -c "from tennis3d.app.home import resource, lifter_manifest; assert b'Tennis3D' in resource('dashboard.html'); resource('assets.yaml'); resource('reconstruction.yaml'); lifter_manifest()"

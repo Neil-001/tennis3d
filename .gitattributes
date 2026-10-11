@@ -1,0 +1,6 @@
+# The examples manifest records the SHA-256 of the exact bytes of each result,
+# timeline and display copy. Git must not convert their line endings in any
+# checkout. Other files keep each clone's own line-ending setting.
+/examples/gallery-v2/*/result.json -text
+/examples/gallery-v2/*/timeline.json -text
+/examples/gallery-v2/*/playback.mp4 -text

@@ -1,0 +1,55 @@
+/* Labeling layout. Tokens, type and controls come from /theme.css. */
+/* A compact title row keeps the frame and the Hit/Bounce buttons on one screen. */
+.hero{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 16px;padding:20px 0 16px;text-align:left}
+.hero h1{font-size:24px}
+.hero .label{color:var(--accent-text)}
+.workspace{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:24px;align-items:start}
+.clip-heading h2{text-transform:none;overflow-wrap:anywhere}
+.clip-heading>div{min-width:0}
+#clip-name{font-size:12px;line-height:18px;text-transform:none;overflow-wrap:anywhere}
+.clip-heading label{display:flex;align-items:center;gap:8px;font-size:12px}
+.clip-heading select{max-width:260px;text-transform:none}
+.screen{position:relative;aspect-ratio:16/9;width:100%;max-height:max(220px,calc(100vh - 430px));background:var(--stage);overflow:hidden}
+.screen video,.screen img{display:block;width:100%;height:100%;object-fit:contain}
+.screen #loading{position:absolute;left:12px;bottom:12px;max-width:calc(100% - 24px);padding:6px 10px;border:1px solid #3f3f46;font-size:12px;background:#18181be6;color:var(--stage-fg)}
+.controls{display:grid;gap:14px;padding:14px 16px 16px}
+.frame-info,.transport{display:flex;align-items:center;gap:8px 12px}
+.frame-info{justify-content:space-between;flex-wrap:wrap;font-size:12px;line-height:18px;color:var(--muted);font-variant-numeric:tabular-nums}
+.frame-info strong{color:var(--fg);font-weight:500}
+#display-mode{text-transform:uppercase}
+#timeline{position:relative;padding-bottom:22px}
+#scrub{display:block;width:100%;margin:0}
+#markers{position:relative;margin:4px 7px 0;height:10px}
+.marker{position:absolute;top:0;width:8px;height:10px;min-height:0;border:0;padding:0;transform:translateX(-50%);background:var(--hit)}
+.marker:hover{background:var(--hit);outline:1px solid var(--fg)}
+.marker.bounce{background:var(--bounce);top:11px}
+.transport{flex-wrap:wrap}
+.transport label{margin-left:auto;font-size:12px;color:var(--muted);text-transform:uppercase}
+.transport select{margin-left:4px;min-height:32px;font-size:12px}
+.label-actions{display:flex;gap:8px}
+.label-actions .hit,.label-actions .bounce{flex:1;min-height:56px;border-color:transparent;color:#09090b;font-size:18px;font-weight:600;text-transform:uppercase}
+.label-actions #undo{min-height:56px}
+.hit,.hit:hover{background:var(--hit)}
+.bounce,.bounce:hover{background:var(--bounce)}
+.hit:hover,.bounce:hover{filter:brightness(1.08)}
+.help{font-size:12px;line-height:18px;color:var(--muted)}
+#event-count{margin-left:6px;color:var(--accent-text)}
+#state{font-size:12px;text-align:right}
+.events-body{display:flex;flex-direction:column;gap:12px;padding:16px}
+#events{list-style:none;margin:0;padding:0;max-height:320px;min-height:90px;overflow-y:auto;border-top:1px solid var(--line)}
+#events li{display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--line);padding:4px 0}
+#events li button{min-height:32px;border-color:transparent;background:none;font-size:12px}
+#events li button:hover{background:var(--soft)}
+#events li button:first-child{flex:1;justify-content:flex-start;text-align:left;white-space:normal;padding:0 6px}
+#events li button:first-child::before{content:'';flex:none;width:8px;height:8px;background:var(--hit)}
+#events li button.event-bounce::before{background:var(--bounce)}
+.annotator{display:grid;gap:6px;font-size:12px;color:var(--muted);text-transform:uppercase}
+.annotator input{width:100%;color:var(--fg)}
+#status{font-size:12px;line-height:18px;min-height:36px;color:var(--accent-text)}
+#status.error{color:var(--bad)}
+.clip-nav{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:24px;padding-top:16px;border-top:1px solid var(--line)}
+.clip-nav span{font-size:12px;line-height:18px;color:var(--muted);text-align:center}
+dialog p{margin:12px 0;line-height:22px}
+dialog button{margin:8px 8px 0 0}
+@media(max-width:950px){.workspace{grid-template-columns:minmax(0,1fr) 280px;gap:16px}}
+@media(max-width:760px){.workspace{grid-template-columns:1fr}.clip-heading label{width:100%}.clip-heading select{flex:1;max-width:none;min-width:0}.transport label{margin-left:0}.clip-nav{flex-wrap:wrap}.clip-nav span{order:3;width:100%}#events{max-height:200px}.label-actions .hit,.label-actions .bounce{font-size:16px}}
